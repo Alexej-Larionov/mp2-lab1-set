@@ -1,0 +1,2 @@
+D:\Git\mp2-lab1-set\sln\vc10\Debug\gtest.pdb
+D:\Git\mp2-lab1-set\sln\vc10\gtest\Debug\gtest.pdb

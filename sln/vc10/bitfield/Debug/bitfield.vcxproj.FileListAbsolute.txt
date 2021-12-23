@@ -1,0 +1,2 @@
+D:\Git\mp2-lab1-set\sln\vc10\Debug\bitfield.pdb
+D:\Git\mp2-lab1-set\sln\vc10\bitfield\Debug\bitfield.pdb
