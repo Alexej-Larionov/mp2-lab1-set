@@ -2,6 +2,7 @@
 
 #include <gtest.h>
 
+
 TEST(TSet, can_get_max_power_set)
 {
   const int size = 5;
@@ -294,4 +295,18 @@ TEST(TSet, check_negation_operator)
   expSet.InsElem(2);
 
   EXPECT_EQ(expSet, set1);
+}
+TEST(TSet, Check_equal)
+{
+    int size = 10;
+    TSet set(size);
+    set.InsElem(5);
+    TSet set1 = set;
+
+    EXPECT_EQ(set1, set);
+}
+TEST(TSet, can_create_empty_set)
+{
+    TSet set(1);
+    EXPECT_EQ(set.IsMember(0), 0);
 }

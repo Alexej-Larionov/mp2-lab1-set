@@ -175,11 +175,19 @@ TBitField TBitField::operator~(void) // отрицание
 // ввод/вывод
 
 istream &operator>>(istream &istr, TBitField &bf) // ввод
-{
+{	
+	int input;
 	for (size_t i = 0; i < bf.GetLength(); i++) {
-		int input;
 		istr >> input;
-		bf.SetBit(i);
+		if (input == 1)
+		{
+			bf.SetBit(i);
+		}
+		else if(input== 0)
+		{
+			bf.ClrBit(i);
+		}
+		else { break; }
 	}
 	return istr;
 }

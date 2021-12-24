@@ -127,11 +127,22 @@ TSet TSet::operator~(void) // дополнение
 istream& operator>>(istream& istr, TSet& s) // ввод
 { 
     int elem;
-    for (size_t i = 0; i < s.MaxPower; i++)
+    char check;
+    char check;
+    do 
+    {
+        istr >> check;
+    } while (check != '{');
+
+    do 
     {
         istr >> elem;
         s.InsElem(elem);
+        do
+            istr >> check;
+        while ((check != ',') && (check != '}'));
     }
+    while (check != '}');
     return istr;
 }
 
