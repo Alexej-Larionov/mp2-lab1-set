@@ -82,9 +82,6 @@ TSet& TSet::operator=(const TSet& s)// присваивание
 
 int TSet::operator==(const TSet& s) const // сравнение
 { 
-    if (BitField != s.BitField)
-        return 0;
-    else
         return (BitField == s.BitField);
 }
 
@@ -130,7 +127,7 @@ TSet TSet::operator~(void) // дополнение
 istream& operator>>(istream& istr, TSet& s) // ввод
 { 
     int elem;
-    while (cin.peek() != '\n') 
+    for (size_t i = 0; i < s.MaxPower; i++)
     {
         istr >> elem;
         s.InsElem(elem);
